@@ -5,7 +5,7 @@ html { box-sizing: border-box; }
 /*
  BARVY
  sede pozadi      #e5e5e5
- svetle fialova   #48418e
+ středně fialova   #48418e
  tmave fialova    #25133d
 
  POUZITE PISMO
@@ -31,3 +31,119 @@ body {
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+/* 
+.obal
+.hlavicka
+    li
+    li .tucne
+.grafika
+    .telefon
+    .nadpis
+    .slogan
+    .tlacitka
+.popis
+    .prvni
+    .druhy
+    .treti
+        .sloupky_text
+        .sloupky_ikona
+        .sloupky_nadpis
+.paticka
+*/
+
+h1, h2, p, .hlavicka, .tlacitka {
+    margin: 0;
+    padding: 0;
+}
+
+.hlavicka {
+    padding: 0;
+    margin: 0;
+    color: #25133d;
+}
+
+.hlavicka li {
+    display: inline-block;
+    padding: 12px 30px;
+}
+
+.tucne {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.grafika {
+    height: 480px;
+    background-image: url("images/pozadi.jpg");
+    color: white;
+    position: relative;
+    /* background-position: top right; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 50px 40px;
+    }
+
+.telefon {
+    /* float: right; */
+    /* Myslela jsem si, že obtékání textu kolem obrázku vyřeším floatem,
+    ale nefungovalo mi to. Nakonec jsem slogan odsadila marginem, ale doteď
+    mi není jasné, proč float nefungoval. ): */
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.nadpis {
+    font-weight: 400;
+    font-size: 90px;
+}
+
+.slogan {
+    font-weight: 300;
+    font-size: 35px;
+    margin-right: 500px;
+}
+
+.tlacitka {
+    position: absolute;
+    bottom: 55px;
+}
+
+.tlacitka li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px 25px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.425);
+    margin-right: 25px;
+}
+
+.tlacitka li:hover {
+    background-color: #48418e;
+}
+
+.popis {
+    display: flex;
+    padding: 45px 30px 50px;
+    text-align: center;
+}
+
+.sloupky_ikona {
+    width: 50px;
+}
+
+.sloupky_nadpis {
+    color: #48418e;
+}
+
+.sloupky_text {
+    padding: 0 20px;
+}
+
+.paticka {
+    text-align: center;
+    padding: 13px;
+    background-color: #48418e;
+    color: white;
+}
